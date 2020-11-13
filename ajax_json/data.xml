@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<items>
+   
+
+    <item>
+        <type>menu00</type>
+        <imgSrc>img/menu01.png</imgSrc>
+        <name>딸기 주스</name>       
+    </item>
+    <item>
+        <type>menu00</type>
+        <imgSrc>img/menu02.png</imgSrc>
+        <name>딸기 오렌지</name>       
+    </item>
+    <item>
+        <type>menu00</type>
+        <imgSrc>img/menu03.png</imgSrc>
+        <name>수박쏙(SSOC)</name>       
+    </item>
+    <item>
+        <type>menu00</type>
+        <imgSrc>img/menu04.png</imgSrc>
+        <name>오렌지</name>       
+    </item>
+    <item>
+        <type>menu00</type>
+        <imgSrc>img/menu05.png</imgSrc>
+        <name>오렌지 쏙</name>       
+    </item>
+    <item>
+        <type>menu00</type>
+        <imgSrc>img/menu06.png</imgSrc>
+        <name>망고파인</name>       
+    </item>
+    <item>
+        <type>menu00</type>
+        <imgSrc>img/menu07.png</imgSrc>
+        <name>망고쏙(SSOC)</name>       
+    </item>
+    <item>
+        <type>menu00</type>
+        <imgSrc>img/menu08.png</imgSrc>
+        <name>키위딸바</name>       
+    </item>
+    <item>
+        <type>menu00</type>
+        <imgSrc>img/menu09.png</imgSrc>
+        <name>키위</name>       
+    </item>
+    <item>
+        <type>menu00</type>
+        <imgSrc>img/menu10.png</imgSrc>
+        <name>블루베리</name>       
+    </item>
+    
+    
+    <item>
+        <type>menu01</type>
+        <imgSrc>img/menu11.png</imgSrc>
+        <name>아메리카노</name>       
+    </item>
+    <item>
+        <type>menu01</type>
+        <imgSrc>img/menu12.png</imgSrc>
+        <name>코코넛 커피 스무디</name>       
+    </item>
+    <item>
+        <type>menu01</type>
+        <imgSrc>img/menu13.png</imgSrc>
+        <name>카페라떼</name>       
+    </item>
+    <item>
+        <type>menu01</type>
+        <imgSrc>img/menu14.png</imgSrc>
+        <name>오렌지 카페라테</name>       
+    </item>
+    <item>
+        <type>menu01</type>
+        <imgSrc>img/menu15.png</imgSrc>
+        <name>바닐라라떼</name>       
+    </item>
+    <item>
+        <type>menu01</type>
+        <imgSrc>img/menu16.png</imgSrc>
+        <name>카페모카</name>       
+    </item>
+    <item>
+        <type>menu01</type>
+        <imgSrc>img/menu17.png</imgSrc>
+        <name>카푸치노</name>       
+    </item>
+    <item>
+        <type>menu01</type>
+        <imgSrc>img/menu18.png</imgSrc>
+        <name>더블샷크림커피</name>       
+    </item>
+    <item>
+        <type>menu01</type>
+        <imgSrc>img/menu19.png</imgSrc>
+        <name>연유커피</name>       
+    </item>
+     <item>
+        <type>menu01</type>
+        <imgSrc>img/menu20.png</imgSrc>
+        <name>티라미수커피</name>       
+    </item>
+    
+    
+    <item>
+        <type>menu02</type>
+        <imgSrc>img/menu21.png</imgSrc>
+        <name>HOT 딸기라떼</name>       
+    </item>
+    <item>
+        <type>menu02</type>
+        <imgSrc>img/menu22.png</imgSrc>
+        <name>핫초콜릿</name>       
+    </item>
+    <item>
+        <type>menu02</type>
+        <imgSrc>img/menu13.png</imgSrc>
+        <name>귤쥬스</name>       
+    </item>
+    <item>
+        <type>menu02</type>
+        <imgSrc>img/menu24.png</imgSrc>
+        <name>유자차</name>       
+    </item>
+    <item>
+        <type>menu02</type>
+        <imgSrc>img/menu25.png</imgSrc>
+        <name>히비스커스유자티</name>       
+    </item>
+    <item>
+        <type>menu02</type>
+        <imgSrc>img/menu26.png</imgSrc>
+        <name>피치모과티</name>       
+    </item>
+    <item>
+        <type>menu02</type>
+        <imgSrc>img/menu27.png</imgSrc>
+        <name>딸바라떼</name>       
+    </item>
+    <item>
+        <type>menu02</type>
+        <imgSrc>img/menu28.png</imgSrc>
+        <name>배 모과차</name>       
+    </item>
+    <item>
+        <type>menu02</type>
+        <imgSrc>img/menu29.png</imgSrc>
+        <name>청포도 유자차</name>       
+    </item>
+     <item>
+        <type>menu02</type>
+        <imgSrc>img/menu30.png</imgSrc>
+        <name>블루베리 레몬차</name>       
+    </item>
+    
+    <item>
+        <type>menu03</type>
+        <imgSrc>img/menu31.png</imgSrc>
+        <name>오렌젤리 에이드</name>       
+    </item>
+    <item>
+        <type>menu03</type>
+        <imgSrc>img/menu32.png</imgSrc>
+        <name>오렌지 밀크</name>       
+    </item>
+    <item>
+        <type>menu03</type>
+        <imgSrc>img/menu33.png</imgSrc>
+        <name>오렌지 말차</name>       
+    </item>
+    <item>
+       <type>menu03</type>
+        <imgSrc>img/menu34.png</imgSrc>
+        <name>생딸라떼</name>       
+    </item>
+    <item>
+       <type>menu03</type>
+        <imgSrc>img/menu35.png</imgSrc>
+        <name>생딸쏙라떼</name>       
+    </item>
+    <item>
+        <type>menu03</type>
+        <imgSrc>img/menu36.png</imgSrc>
+        <name>망고라떼</name>       
+    </item>
+    <item>
+        <type>menu03</type>
+        <imgSrc>img/menu37.png</imgSrc>
+        <name>딸바라떼</name>       
+    </item>
+    <item>
+        <type>menu03</type>
+        <imgSrc>img/menu38.png</imgSrc>
+        <name>피치심쿵에이드</name>       
+    </item>
+    <item>
+        <type>menu03</type>
+        <imgSrc>img/menu39.png</imgSrc>
+        <name>미숫가루컵빙수</name>       
+    </item>
+     <item>
+       <type>menu03</type>
+        <imgSrc>img/menu40.png</imgSrc>
+        <name>과일쏙컵빙수</name>       
+    </item>
+    
+    <item>
+        <type>menu04</type>
+        <imgSrc>img/menu41.png</imgSrc>
+        <name>비스킷슈 플레인</name>       
+    </item>
+    
+    <item>
+        <type>menu04</type>
+        <imgSrc>img/menu42.png</imgSrc>
+        <name>비스킷슈 녹차</name>       
+    </item>    
+    
+    <item>
+        <type>menu04</type>
+        <imgSrc>img/menu43.png</imgSrc>
+        <name>애이미(愛二味) 샌드</name>       
+    </item>
+
+
+    <item>
+       <type>menu04</type>
+        <imgSrc>img/menu44.png</imgSrc>
+        <name>로키로드 쿠키</name>       
+    </item>
+    <item>
+        <type>menu04</type>
+        <imgSrc>img/menu45.png</imgSrc>
+        <name>초콜릿청크 쿠키</name>       
+    </item>
+
+    <item>
+        <type>menu04</type>
+        <imgSrc>img/menu46.png</imgSrc>
+        <name>치즈스틱케익</name>       
+    </item>
+    <item>
+        <type>menu04</type>
+        <imgSrc>img/menu47.png</imgSrc>
+        <name>초코슈스틱</name>       
+    </item>
+    <item>
+        <type>menu04</type>
+        <imgSrc>img/menu48.png</imgSrc>
+        <name>요거트슈스틱</name>       
+    </item>
+    <item>
+        <type>menu04</type>
+        <imgSrc>img/menu49.png</imgSrc>
+        <name>마약핫도그</name>       
+    </item>
+    
+     <item>
+       <type>menu04</type>
+        <imgSrc>img/menu50.png</imgSrc>
+        <name>쥬씨락</name>       
+    </item>
+
+
+    
+</items>

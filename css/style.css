@@ -1,0 +1,927 @@
+@import url(common.css);
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    word-break: keep-all;
+
+}
+
+p {
+    white-space: pre-line;
+}
+
+body.active {
+    overflow: hidden
+}
+
+.trans_active{
+    transform:translateX(-100%);
+    transition: .5s;
+}
+
+.trans_active_right{
+    transform:translateX(100%);
+    transition: .5s;
+}
+
+
+/* -------------- loading  -------------- */
+.loading {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background: #ffd200;
+    z-index: 33;
+}
+
+#loadingwrap {
+    width: 78px;
+    height: 135px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 0 0 -30px;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    opacity: 1;
+
+}
+
+#loadingwrap span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: smokeLeft 2s infinite;
+
+}
+
+#loadingwrap .left {
+    background: url('../img/stra.svg') left center no-repeat;
+    top: -90px;
+    right: -44px;
+}
+
+#loadingwrap .right {
+    background: url(../img/friu.svg) center right no-repeat;
+    top: -110px;
+    left: -44px;
+}
+
+#loadingwrap .middle {
+    background: url('../img/banana.svg') left center no-repeat;
+    top: -170px;
+    right: -44px;
+}
+
+#loadingwrap .top {
+    background: url('../img/cherry.svg') left center no-repeat;
+    top: -190px;
+    left: -5px;
+}
+
+@keyframes smokeLeft {
+    0% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px)
+    }
+
+    50% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+
+    100% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -webkit-transform: translateY(15px);
+        transform: translateY(15px)
+    }
+}
+
+
+
+
+/* -------------- fixed frame -------------- */
+.frame {
+    position: fixed;
+    z-index: 3;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.frame div {
+    background-size: cover !important;
+    position: absolute;
+    width: 34%;
+    height: 50%;
+    transition: .5s;
+    -webkit-transition: -webkit-transform 1s;
+    -webkit-transform: transform 1s;
+    transform: scale(1);
+    position: fixed;
+    z-index: 3;
+    pointer-events: none;
+    */
+}
+
+.frame .left_top {
+    top: 0;
+    left: 0;
+    height: 50%;
+    background: url("../img/left_top.png") no-repeat right bottom;
+}
+
+.frame .right_top {
+    top: 0;
+    right: 0;
+    height: 50%;
+    background: url("../img/right_top.png") no-repeat left bottom;
+}
+
+.frame .left_bottom {
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    background: url("../img/left_bottom.png") no-repeat right top;
+}
+
+.frame .right_bottom {
+    bottom: 0;
+    right: 0;
+    height: 50%;
+    background: url("../img/right_bottom.png") no-repeat left top;
+}
+
+.frame .left_top.active {
+    transform: translate(-20%, -20%) scale(0.8) ;
+    transform-origin: top left 0px;
+}
+
+.frame .right_top.active {
+    transform: translate(20%, -20%) scale(0.8) ;
+    transform-origin: top right 0px;
+}
+
+.frame .left_bottom.active {
+    transform: translate(-20%, 20%) scale(0.8) ;
+    transform-origin: bottom left 0px;
+}
+
+.frame .right_bottom.active {
+    transform: translate(20%, 20%) scale(0.8) ;
+    transform-origin: bottom right 0px;
+}
+
+
+/* -------------- 헤더 -------------- */
+
+header {
+    position: fixed;    
+    right: 0;
+    z-index: 3;
+    
+}
+
+.menu-overlay {
+    display: none;
+}
+
+/*1-3.버거메뉴*/
+header>div{
+    position: fixed;
+    text-align: center;
+    top:-70px;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    border: none;
+    z-index: 10;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background: #ec0928;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header>div.active{top:0;}
+
+header>div.trans{
+    transform: translateY(-100%);
+}
+header .menu-trigger {
+	position: relative;
+	width: 30px;
+	height: 16px;
+    z-index:11;
+    transform: scale(1); 
+}
+
+
+header  .menu-trigger,
+header .menu-trigger span {
+	display: inline-block;
+	transition: all .4s;
+	box-sizing: border-box;
+}
+
+header  .menu-trigger span {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #ffd200;
+	border-radius: 4px;
+}
+header .menu-trigger span:nth-of-type(1) {    
+	top: 0;
+}
+header .menu-trigger span:nth-of-type(2) {
+    top:50%; transform: translateY(-50%);   
+}
+header .menu-trigger span:nth-of-type(3) {
+	bottom: 0;
+}
+
+/*---------트리거 메뉴 액티브---------*/
+
+header .menu-trigger.active span:nth-of-type(1) {
+    transform: translateY(7px) rotate(45deg);
+} 
+
+header .menu-trigger.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+header .menu-trigger.active span:nth-of-type(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/*----------버거메뉴 오픈----------*/
+header .menu-overlay{    
+    position: fixed;
+    text-align: center;
+    display:none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    border: none;
+    z-index: 9;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background: #ffd200;
+    
+    
+}
+header .menu-overlay nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+header .menu-overlay .m_stroke a {
+    font-size:4em;
+/*color:transparent;*/
+/*-webkit-text-stroke: 1px #fff; */
+    display: block;
+    margin:1vh 0;    
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+    
+    color:#ffd200;
+    transition: 1s;
+}
+
+header .menu-overlay .m_stroke:hover a{
+    transform: translateX(20%);
+    display:block;
+}
+
+
+
+
+
+
+
+/* -------------- 메인내 공통 -------------- */
+
+
+.maincolor {color:##ffd200;}
+.pointcolor {color:#ec0928;}
+.subcolor {color:#541b86;}
+
+
+.title {
+    font-size: 5em;
+    line-height: 1.2em;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 14px;
+    z-index: 2;
+    text-shadow: 6px 6px 0 rgba(236,9,40,0.2);
+    transition: .5s;
+}
+
+.h3 {
+    font-size: 2.5em;
+    line-height: 1.2em;
+    font-weight: 800;
+    text-transform: uppercase;
+    z-index: 2;
+    letter-spacing: -1.5px;
+    transition: .5s;
+    padding-top: 5%;
+}
+}
+
+.h4 {
+    font-size: 1.8em;
+    line-height: 2em;
+    font-weight: 600;
+    text-transform: uppercase;
+    z-index: 2;
+    letter-spacing: -1.5px;
+    transition: .5s;
+}
+
+.thumb {
+    z-index: 2;
+}
+
+.thumb:after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 13px;
+    left: -13px;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.thumb img {
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* -------------- 메인01 main01 -------------- */
+.main01 {
+    position: relative;
+    background: #ffd200;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.main01 img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: rotate(0deg) scale(1) translate(-50%, -50%);
+    transform-origin: center center 0px;
+    animation: logo 1s 1s 1 ease-in alternate;
+/*    transition: 1s 0s ease-in;*/    
+}
+
+.main01 img.active {
+    transform: rotate(360deg) translate(-50%, -50%) scale(1);
+    transition: 0.8s 0s ease-in;
+
+}
+
+@keyframes logo {
+    0% {
+        transform: rotate(360deg) scale(2.5);
+        transform-origin: left top 0px;
+    }
+    100% {
+        transform: rotate(0deg) translate(-50%, -50%) scale(1);
+    }
+}
+
+
+/* -------------- 메인02 main02 소개 -------------- */
+.main02 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.main02 .centerp {
+    position: absolute;
+    font-size: 3em;
+    text-transform: uppercase;
+    top:50%; left:50%;
+    transform: translateX(-50%) rotate(270deg);
+    z-index:1;
+}
+
+/*
+.main02 > div {
+    width: 50%;
+}
+*/
+
+
+.main02_1 {
+    position: relative;
+    background: #ffe569;
+    padding: 10% 0;
+    transition: 1s;
+    width:50%;
+}
+
+.main02_1 h2 {
+    text-align: right;
+    padding-right: 5%;
+    transition: 1s;
+}
+
+
+.main02_1 div {
+    width: 65%;
+    margin: 0 auto;
+    text-align: right;
+    line-height: 2em;
+    transition: 1s;
+}
+
+
+.main02_1 .bg_video {
+    display:none;
+ width:100%;
+}
+
+.main02_1 .bg_video video {
+    width: 100%;
+}
+
+
+.main02_2 {
+    width:50%;
+    text-align: center;
+    background: #fdec9b;
+    position: relative;
+
+}
+
+.main02_2 .bg_video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 100%;
+    max-height: 500px;
+
+}
+
+.main02_2 .bg_video video {
+    width: 100%;
+
+}
+
+
+/* -------------- 메인03 main03 픽스이미지 -------------- */
+
+.main03 {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    background: url("../img/main03.jpg") no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+
+/* -------------- 메인04 main04 메뉴 -------------- */
+
+.main04 {
+    position: relative;
+    height: auto;
+    background: #ffd200;
+    padding:14% 0;
+}
+
+.main04 .big_photo {
+    position: absolute;
+    top: -18%;
+    right: 0;
+    width: 50%;
+    max-width: 980px;
+}
+
+.main04 .big_photo:after {
+    background: #ac9377;
+}
+
+.main04 .small_photo {
+    position: absolute;
+    top: -6%;
+    right: 46%;
+    width: 35%;
+    margin-right: -150px;
+}
+
+.main04 .small_photo:after {
+    background: #395442;
+}
+
+.main04 h2 {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    margin: 0 0 80px 0;
+    color: #fff;
+}
+
+.main04 .menu {
+    position: relative;
+    width: 100%;
+    padding:5% 0;
+}
+
+.main04 .menu .menu-list  {
+    width: 70%;    
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1%;
+    border-radius: 0 50px 50px 0;
+
+}
+.main04 .menu .menu-list li {
+    padding:2% 0;
+    position:relative;
+}
+
+
+.main04 .menu .menu-list li a { 
+    font-weight:700; 
+    font-size:1.1em; 
+    letter-spacing: .3em
+}
+.main04 .menu .menu-list li a.active{color:#ffd200;}
+
+.main04 .menu .menu-list li a.active:after{
+    content:'';    
+    position:absolute;
+    bottom:0; left:50%;
+    transform: translateX(-50%);
+    width: 0px;height: 0px;
+    border-top:13px solid transparent;
+    border-bottom:13px solid #ffd200;
+    border-right: 13px solid transparent;
+    border-left: 13px solid  transparent;
+}
+
+
+.main04 .menu .menu-content {
+    width:80%; 
+    margin: 0 auto;}
+.main04 .menu .menu-content li{
+    width:20%; 
+    display:inline-block;}
+.main04 .menu .menu-content li img {width:100%;}
+/* -------------- 메인05 main05 -------------- */
+
+
+.main05 {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    background: url("../img/main05.jpg") no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+/* -------------- 메인06 main06 -------------- */
+
+
+.main06 {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background: #fdec9b;
+    padding:5% 0;
+}
+
+.main06 .big_photo {
+    position: absolute;
+    top: -13%;
+    right: 0;
+    width: 44%;
+    max-width: 980px;
+}
+
+.main06 .big_photo:after {
+    background: #395442;
+}
+
+.main06 .small_photo {
+    position: absolute;
+    top: -28%;
+    right: 1%;
+    width: 22%;
+    max-width: 540px;
+}
+
+.main06 .small_photo:after {
+    background: #ac9377;
+}
+
+.main06 h2{
+    text-align: left;
+    position: absolute;
+    top: 2%;
+    right: 40%;
+}
+
+.main06 div {transition: .5s;}
+
+.main06_1 {
+    width: 50%;
+    line-height: 2em;
+    text-align: right;
+    padding:5% 0;
+}
+
+
+.main06 .main06_2 {
+    width:80%;
+    margin:0 auto;
+}
+
+.main06_2 h4 {
+    display:block;
+    background:#541b86;
+    padding:1% 0;
+    color:#fff;
+}
+.main06_2 p {
+    padding:1% 0;
+}
+
+.main06 .main06_2 img {width:100%;}
+
+.main06 .main06_2 .imglist{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin:1% 0;
+}
+.main06 .main06_2 .imglist li {width:33%;}
+
+
+
+
+/* -------------- 메인07 main07 픽스이미지 -------------- */
+
+.main07 {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    background: url("../img/main07.jpg") no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+
+/* -------------- 메인08 main08 -------------- */
+
+
+.main08 {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background: #ffe569;
+    padding:5% 0;
+}
+
+.main08 .big_photo {
+    position: absolute;
+    top: -20%;
+    left: 0;
+    width: 45%;
+    max-width: 980px;
+}
+
+.main08 .big_photo:after {
+    background: #395442;
+    top: 13px;
+    left: 13px;
+}
+
+.main08 .small_photo {
+    position: absolute;
+    top: -30%;
+    left: 1%;
+    width: 18%;
+    max-width: 540px;
+}
+
+.main08 .small_photo:after {
+    background: #ac9377;
+    top: 13px;
+    left: 13px;
+}
+
+.main08 h2 {
+    position: absolute;
+    top: 4%;
+    right: 20%;
+    margin: 0 0 80px 0;
+
+}
+
+.main08 .main08_1 {
+    width: 50%;
+    margin: 10% 0 0 40%;
+    text-align: left;
+}
+.main08 .main08_1 table {
+    width:100%;
+    background:#fff;
+    text-align: center;
+
+}
+.main08 .main08_1 table td {padding:5% 2%;}
+
+.main08 .main08_1 table thead{
+    background:#ec0928; color:#fff;
+    border:1px solid #ec0928;
+}
+.main08 .main08_1 table thead td {font-weight: 700;}
+.main08 .main08_1 table tbody td { border:1px solid #ec0928;}
+
+
+.main08 .main08_2 {
+    width: 50%;
+    margin: 3% 0 0 40%;
+}
+.main08 .main08_2 ol{
+    width:100%;
+} 
+.main08 .main08_2 ol li {
+    margin-top: 1%;
+    border: 1px solid #ec0928;
+    width: 50%;
+    min-width: 300px;
+    padding: 2% 0;
+    background:#fff;
+    text-align: center;
+}
+.main08 .main08_2 ol li:first-child {
+    background:#ec0928;
+    color:#fff;
+    font-weight: 700;
+    font-size: 2em;
+    letter-spacing: 1em;
+    text-align: center;
+}
+
+.main08 .main08_2 ol li:before {
+    content:'';
+    display:inline-block;
+    width:50px; height:50px;
+    margin-right:2%;
+    vertical-align: middle;
+    
+}
+
+.main08 .main08_2 ol li:nth-of-type(1):before {
+    width:0; height:0;
+}
+
+.main08 .main08_2 ol li:nth-of-type(2):before {
+    background: url('../img/icon_1.png') no-repeat center;
+}
+.main08 .main08_2 ol li:nth-of-type(3):before {
+    background: url('../img/icon_2.png') no-repeat center;
+}
+.main08 .main08_2 ol li:nth-of-type(4):before {
+    background: url('../img/icon_3.png') no-repeat center;
+}
+.main08 .main08_2 ol li:nth-of-type(5):before {
+    background: url('../img/icon_4.png') no-repeat center;
+}
+.main08 .main08_2 ol li:nth-of-type(6):before {
+    background: url('../img/icon_5.png') no-repeat center;
+}
+.main08 .main08_2 ol li:nth-of-type(7):before {
+    background: url('../img/icon_6.png') no-repeat center;
+}
+.main08 .main08_2 ol li:nth-of-type(8):before {
+    background: url('../img/icon_7.png') no-repeat center;
+}
+.main08 .main08_2 ol li:nth-of-type(9):before {
+    background: url('../img/icon_8.png') no-repeat center;
+}
+.main08 .main08_2 ol li:nth-of-type(10):before {
+    background: url('../img/icon_9.png') no-repeat center;
+}
+
+
+
+
+/* -------------- 메인09 main09 -------------- */
+
+
+.main09 {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    background: #ffd200;
+
+}
+.main09 > div:nth-of-type(1){
+    position:relative;
+    width:60%;
+    padding:10% 5%;
+    display:flex;
+    justify-content: space-around;
+    align-content: center;   
+    
+}
+
+.main09 > div:nth-of-type(1) > div:nth-of-type(1){
+    text-align:left;
+    line-height:2em;
+}
+
+
+
+.main09 > div:nth-of-type(2){
+
+}
+
+.main09 .big_photo {    
+    position: absolute;
+    top: -78px;
+    right: 5%;
+    width: 35%;
+    max-width: 980px;
+    height: 650px;
+}
+
+.main09 .big_photo:after {
+    background: #395442;
+    top: 13px;
+    left: 13px;
+}
+
+.main09 .big_photo iframe {
+    width:100%;
+    height:100%;
+}
+
+
+
+
+@media screen and (max-width: 768px) 
+{    
+    .main02_1 {width:100%;}
+    .main02_2{display:none;}
+
+    .thumb {display:none;}
+    .centerp {display:none;}
+
+}
+
