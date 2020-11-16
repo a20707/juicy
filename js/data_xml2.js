@@ -21,39 +21,49 @@ $(function(){
         //↓변수를 하나 만들어주면서 ''(빈칸)을 주는 이유는 만약에 첫번째 값이 =이 아니라 += 상황이 온다면 값이 없는 곳에 
         var product ='', type,imgSrc,name; 
             
-        function funList(code){
-            product = ''; 
+        
+      function funList(code){  
+          
+        $('.menu-list li a').on('click',function(){                
             
-            $(data).find('item').each(function(){
+            product = ''; 
+                $(data).find('item').each(function(){
                 //↓this는 여기서 말하는 item
                 type =$(this).find('type').text();
                 imgSrc = $(this).find('imgSrc').text();
                 name = $(this).find('name').text(); 
                 
                 
-            //↓글자가 너무 기니까 몇 글자 이상 넘어가면 잘라주기 위해서 substr을 사용한다
-                name = name.substr(0,10);
-            //  name 이란 변수에 name에 .substr로 0번째부터 20번째 글자까지만 나오게
-                
-            //↓substr만 하면 글자가 걍 잘려서 뒤가 없어보이기 때문에 ...을 추가해주기 위하여 replace 사용
-//                name = name.replace(name,name+'...');
-            //replace(name -> 위에서 자른 글자,name+'...' ->네임에 ...을 더해줌)    
+                //↓글자가 너무 기니까 몇 글자 이상 넘어가면 잘라주기 위해서 substr을 사용한다
+                    name = name.substr(0,10);
+                //  name 이란 변수에 name에 .substr로 0번째부터 20번째 글자까지만 나오게
 
-            if(code == type){ //|| code  == 'menu00'
- 
-               product += "<li>"
-               product += "<div>"
-               product += "<img src='" +imgSrc+ "'alt=''>"
-               product += "<p>"+name+"</p>";
-               product += "</div>";
-               product += "</li>";
-                
-                }
-            });  
+                //↓substr만 하면 글자가 걍 잘려서 뒤가 없어보이기 때문에 ...을 추가해주기 위하여 replace 사용
+    //                name = name.replace(name,name+'...');
+                //replace(name -> 위에서 자른 글자,name+'...' ->네임에 ...을 더해줌)    
+
+                if(code == type){ //|| code  == 'menu00'
+
+                   product += "<li>"
+                   product += "<div>"
+                   product += "<img src='" +imgSrc+ "'alt=''>"
+                   product += "<p>"+name+"</p>";
+                   product += "</div>";
+                   product += "</li>";
+
+                    }
+                });
+                $('.menu-content').addClass('active'); 
                 $('.menu-content').html(product);            
                 $('.menu-list li a').removeClass('active');            
-                $(".menu-list a[href='"+code+"']").addClass('active');            
-        }            
+                $(".menu-list a[href='"+code+"']").addClass('active');   
+                
+                
+            });            
+        }    
+            
+                         
+                    
         funList('menu00');
             
         //함수 실행시 p000을 넣어주는 이유는 맨 처음 화면에 진입했을 때 all을 띄워주기 위해서. 여기에 뭔가를 넣기 싫을 때에는 html 자체에 p000자리를 href=''으로 빈 값으로 두고 여기도 비우면 된다. 대신 if code=='p000'부분도 비워줘야함

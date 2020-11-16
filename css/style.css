@@ -335,7 +335,7 @@ header .menu-overlay .m_stroke:hover a{
 
 
 .title {
-    font-size: 5em;
+    font-size: 4.5em;
     line-height: 1.2em;
     font-weight: 800;
     text-transform: uppercase;
@@ -346,7 +346,7 @@ header .menu-overlay .m_stroke:hover a{
 }
 
 .h3 {
-    font-size: 2.5em;
+    font-size: 2.2em;
     line-height: 1.2em;
     font-weight: 800;
     text-transform: uppercase;
@@ -358,7 +358,7 @@ header .menu-overlay .m_stroke:hover a{
 }
 
 .h4 {
-    font-size: 1.8em;
+    font-size: 1.6em;
     line-height: 2em;
     font-weight: 600;
     text-transform: uppercase;
@@ -580,8 +580,10 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 1%;
+    margin-top: 4%;
     border-radius: 0 50px 50px 0;
+    position: relative;
+    z-index: 3;
 
 }
 .main04 .menu .menu-list li {
@@ -869,9 +871,11 @@ main {
     height: 70vh;
     position: relative;
     background: #ffd200;
-
 }
-.main09 > div:nth-of-type(1){
+.main09 .map{
+    display:none;
+}
+.main09 > div:nth-of-type(2){
     position:relative;
     width:60%;
     padding:10% 5%;
@@ -881,7 +885,7 @@ main {
     
 }
 
-.main09 > div:nth-of-type(1) > div:nth-of-type(1){
+.main09 > div:nth-of-type(2) > div:nth-of-type(1){
     text-align:left;
     line-height:2em;
 }
@@ -915,13 +919,259 @@ main {
 
 
 
-@media screen and (max-width: 768px) 
-{    
-    .main02_1 {width:100%;}
-    .main02_2{display:none;}
+@media screen and (min-width: 320px) and (max-width: 1024px) {
 
-    .thumb {display:none;}
-    .centerp {display:none;}
+    
 
+/* -------------- fixed frame -------------- */
+
+
+.frame .left_top.active {
+    transform: translate(0%, -10%) scale(0.5) ;
+    transform-origin: top left 0px;
+}
+
+.frame .right_top.active {
+    transform: translate(0%, -10%) scale(0.5) ;
+    transform-origin: top right 0px;
+}
+
+.frame .left_bottom.active {
+    transform: translate(0%, 0%) scale(0.5) ;
+    transform-origin: bottom left 0px;
+}
+
+.frame .right_bottom.active {
+    transform: translate(0%, 1%) scale(0.5) ;
+    transform-origin: bottom right 0px;
+}
+
+/* -------------- 헤더 -------------- */
+
+
+/*----------버거메뉴 오픈----------*/
+
+
+header .menu-overlay .m_stroke:hover a{
+    color:#000;
+    text-shadow: none;
+    font-weight: 800;
+}
+
+/* -------------- 메인내 공통 -------------- */
+
+
+
+.title {
+    font-size: 3em;
+    line-height: 1.2em;
+    letter-spacing: 10px;
+}
+
+.h3 {
+    font-size: 1.5em;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+.h4 {
+    font-size: 1.8em;
+    line-height: 2em;
+    font-weight: 600;
+    text-transform: uppercase;
+    z-index: 2;
+    letter-spacing: -1.5px;
+    transition: .5s;
+}
+
+.thumb {
+    display:none;
+}
+
+
+/* -------------- 메인01 main01 -------------- */
+
+
+/* -------------- 메인02 main02 소개 -------------- */
+.main02 {
+    display: block;
+}
+
+.main02 .centerp {
+    display: none;
+}
+
+.main02_1 {
+    width:100%;
+}
+
+.main02_1 h2 {
+    text-align: center;
+    padding:0;
+}
+.main02_1 div{
+    text-align: center;
+}
+
+.main02_1 .bg_video {
+    display:block;
+    padding-top: 5vh;
+}
+
+
+.main02_2 {
+    display:none;
+
+}
+
+
+
+/* -------------- 메인03 main03 픽스이미지 -------------- */
+
+.main03 {
+    height: 30vh;
+}
+
+
+
+/* -------------- 메인04 main04 메뉴 -------------- */
+
+/*04일단 다 날림*/
+    
+/* -------------- 메인05 main05 -------------- */
+
+
+.main05 {
+    height: 30vh;
+
+}
+
+/* -------------- 메인06 main06 -------------- */
+
+
+.main06 {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background: #fdec9b;
+    padding:5% 0;
+}
+
+
+.main06 h2{
+    text-align: center;
+    position: relative;
+    left:50%; top:2%;
+    transform: translateX(-50%);
+    width:100%;
+    
+    
+}
+
+
+.main06_1 {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding:3% 0;
+}
+    
+.main06 div {
+    margin-bottom: 3vh;
+}
+
+.main06_2 h4 {
+    display:block;
+    font-size:1.3em;
+}
+
+
+
+/* -------------- 메인07 main07 픽스이미지 -------------- */
+
+.main07 {
+    height: 30vh;
+}
+
+
+/* -------------- 메인08 main08 -------------- */
+
+
+.main08 {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background: #ffe569;
+    padding:5% 0;
+}
+
+
+.main08 h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width:100%;
+
+}
+
+.main08 .main08_1 {
+    width: 90%;
+    margin:0 auto;
+    margin-top:12vh;
+    margin-bottom: 5vh;
+}
+
+.main08 .main08_1 table td{
+    padding: 5% 1%;
+    min-width: 70px;
+}
+.main08 .main08_2 {
+    width: 90%;
+    margin:0 auto;
+}
+
+.main08 .main08_2 ol li {
+    width: 100%;
+}
+    
+
+
+
+
+/* -------------- 메인09 main09 -------------- */
+
+
+
+.main09 {
+    height: auto;
+    padding:5vh 0;
+}
+    
+.main09 .map{
+    display:block;
+    width:90%;
+    margin: 0 auto;
+}
+.main09 .map iframe {
+    width:100%;
+    height:100%;
+}    
+    
+.main09 > div:nth-of-type(2){
+    position:relative;
+    width:90%;
+    margin:0 auto;
+    display:block;
+    
+}
+
+.main09 > div:nth-of-type(2) > div:nth-of-type(1){
+    text-align:center;
+    line-height:2em;
+}
+.main09 > div:nth-of-type(2) > div:nth-of-type(1) img{
+    width: 30%;
+}
+/*미디어쿼리 종료*/
 }
 
